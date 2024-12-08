@@ -1,7 +1,5 @@
 <?php
-    session_start();
-
-    $db_name = "ksiegarnia";
+    $db_name = "bookstore";
     $db_host = "localhost";
     $db_password = "";
     $db_user = "root";
