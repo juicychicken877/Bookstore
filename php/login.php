@@ -5,14 +5,15 @@
     if (isset($_SESSION["logged"])) {
         header("Location: ../index.php");
     }
-    if (!isset($_POST["login"]) || !isset($_POST["password"])) {
+
+    if (!isset($_SESSION["login"]) || !isset($_SESSION["password"])) {
         header("Location: login_form.php");
     }
 
-    $login = $_POST["login"];
-    $password = $_POST["password"];
-
     try {
+        $login = $_POST["login"];
+        $password = $_POST["password"];
+
         require_once "connect.php";
 
         $db_connection = DatabaseConnect();
@@ -29,7 +30,9 @@
             $fetched_password = $data["password"];
             
             if (password_verify($password, $fetched_password)) {
+                // logged in
                 $_SESSION["logged"] = true;
+                $_SESSION["user"] = $data["username"];
                 
                 header("Location: ../index.php");
             } else {

@@ -1,4 +1,7 @@
 <?php 
+    if (isset($_SESSION["logged"])) {
+        header("Location: ../index.php");
+    }
     $root = "/PHP_Websites/Ksiegarnia/";
 ?>
 
