@@ -4,7 +4,9 @@
     if (isset($_SESSION["logged"])) {
         header("Location: ../index.php");
     }
-    $root = $_SESSION["root_directory"];
+    
+    if (isset($_SESSION["root_directory"])) $root = $_SESSION["root_directory"];
+    else header("Location: ../index.php");
 ?>
 
 <!DOCTYPE html>
@@ -12,11 +14,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include "components/font.php" ?>
     <link rel="stylesheet" href="../css/main.css">
     <title>LOGIN</title>
 </head>
 <body>
-    <?php include "side_panel.php" ?>
+    <?php include "components/side_panel.php" ?>
 
     <main>
         <h3>Zaloguj się</h3>

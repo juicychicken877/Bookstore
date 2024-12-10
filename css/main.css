@@ -1,7 +1,19 @@
+@import url("books.css");
+
 * {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    font-family: "Lato", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: black;
 }
 
 #side_panel, main {
@@ -10,16 +22,17 @@
 }
 
 main {
+    background-color: #eee;
     width: 80%;
-    padding: 5px;
+    padding: 15px;
     box-sizing: border-box;
 }
 
 #side_panel {
     box-sizing: border-box;
-    padding: 5px;
+    padding: 15px;
     width: 20%;
-    background-color: red;
+    background-color:burlywood;
 }
 
 .categories {
@@ -27,12 +40,8 @@ main {
     flex-direction: column;
 }
 
-.categories > li {
+.categories > a > li {
     font-size: 20px;
-}
-
-.categories > li:hover {
-    color: white;
 }
 
 #nav {
@@ -42,8 +51,13 @@ main {
     row-gap: 10px;
 }
 
-#nav > li {
+.header {
     font-size: 24px;
+    font-weight: 900;
+}
+
+.link:hover {
+    color: white;
 }
 
 #logo > img {
@@ -53,5 +67,4 @@ main {
 
 .error {
     color: red;
-    font-size: 12px;
 }

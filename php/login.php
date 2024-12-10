@@ -14,7 +14,7 @@
         $login = $_POST["login"];
         $password = $_POST["password"];
 
-        require_once "connect.php";
+        require_once "components/connect.php";
 
         $db_connection = DatabaseConnect();
 

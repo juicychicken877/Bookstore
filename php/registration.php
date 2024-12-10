@@ -94,7 +94,7 @@
     if (isset($_POST["email"])) $email = $_POST["email"];
 
     if (isset($_POST["username"])) {
-        require_once "connect.php";
+        require_once "components/connect.php";
 
         $db_connection = DatabaseConnect();
 
@@ -138,12 +138,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include "components/font.php" ?>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/registration.css">
     <title>Księgarnia</title>
 </head>
 <body>
-    <?php include "side_panel.php" ?>
+    <?php include "components/side_panel.php" ?>
 
     <main>
         <section class="registration">  

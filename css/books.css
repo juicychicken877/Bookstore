@@ -1,0 +1,17 @@
+.books {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    column-gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.book {
+    width: 140px;
+}
+
+.book:hover {
+    background-color: burlywood;
+}

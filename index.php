@@ -10,18 +10,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include "php/components/font.php" ?>
     <link rel="stylesheet" href="css/main.css">
     <title>Księgarnia</title>
 </head>
 <body>
-    <?php include "php/side_panel.php" ?>
+    <?php include "php/components/side_panel.php" ?>
     
     <main>
-        <?php 
-            require_once "php/book_manager.php";
 
-            DisplayBooks();
-        ?>
     </main>
 </body>
 </html>

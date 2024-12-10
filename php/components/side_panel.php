@@ -1,5 +1,6 @@
 <?php 
-    $root = $_SESSION["root_directory"];
+    if (isset($_SESSION["root_directory"])) $root = $_SESSION["root_directory"];
+    else header("Location: ../index.php");
 ?>
 
 <section id="side_panel">
@@ -15,15 +16,15 @@
         ?>
         <?php 
             if (!isset($_SESSION["logged"])) {
-                echo '<li><a href="'.$root.'php/login_form.php">ZALOGUJ SIĘ</a></li>'; 
+                echo '<li><a href="'.$root.'php/login_form.php" class="header link">Zaloguj się</a></li>'; 
             } else {
-                echo '<li><a href="'.$root.'php/logout.php">WYLOGUJ</a></li>';
+                echo '<li><a href="'.$root.'php/logout.php" class="header link">Wyloguj się</a></li>';
             }
         
         ?>
-        <li><a href="<?php echo $root?>index.php">STRONA GŁÓWNA</a></li>
+        <li><a href="<?php echo $root?>index.php" class="header link">Strona Główna</a></li>
         <li>
-            <span>KATEGORIE</span>
+            <span class="header">Kategorie</span>
             <ul class="categories">
                 <?php 
                     // display all existing categories in a database in a list
@@ -44,7 +45,7 @@
                     }
 
                     foreach($category_array as $category) {
-                        echo "<li>".$category."</li>";
+                        echo "<a href=".$root."php/category.php?category=".urlencode($category)." class='link'><li>".$category."</li></a>";
                     }
                 ?>
             </ul>

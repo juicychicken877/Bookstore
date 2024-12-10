@@ -14,11 +14,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include "components/font.php" ?>
     <link rel="stylesheet" href="../css/main.css">
     <title>WELCOME</title>
 </head>
 <body>
-    <?php include "side_panel.php" ?>
+    <?php include "components/side_panel.php" ?>
 
     <main>
         <h2>Witaj na pokładzie księgarni!</h2>
