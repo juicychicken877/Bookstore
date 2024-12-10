@@ -1,6 +1,8 @@
 <?php 
     error_reporting(E_ALL & ~E_NOTICE);
     session_start();
+
+    $_SESSION["root_directory"] = "/PHP_Websites/Ksiegarnia/";
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +17,11 @@
     <?php include "php/side_panel.php" ?>
     
     <main>
-        <p>Strona Główna</p>
+        <?php 
+            require_once "php/book_manager.php";
+
+            DisplayBooks();
+        ?>
     </main>
 </body>
 </html>

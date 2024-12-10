@@ -1,5 +1,5 @@
 <?php 
-    $root = "/PHP_Websites/Ksiegarnia/";
+    $root = $_SESSION["root_directory"];
 ?>
 
 <section id="side_panel">
@@ -8,6 +8,7 @@
     </div>
     <ul id="nav">
         <?php 
+            // if user is logged then display logout button and the other way around
             if (isset($_SESSION["logged"])) {
                 echo "<span> Witaj ".$_SESSION["user"]."!</span>";
             }
@@ -24,16 +25,28 @@
         <li>
             <span>KATEGORIE</span>
             <ul class="categories">
-                <li>Neuronauka</li>
-                <li>Technologia</li>
-                <li>Astronomia</li>
-                <li>Fikcja</li>
-                <li>Psychologia</li>
-                <li>Historia</li>
-                <li>Biografia</li>
-                <li>Nauki Ścisłe</li>
-                <li>Podręczniki Szkolne</li>
-                <li>Inne</li>
+                <?php 
+                    // display all existing categories in a database in a list
+                    require_once "connect.php";
+
+                    $category_array = array();
+                    $select_query = "SELECT books.category FROM books";
+                    $db_connection = DatabaseConnect();
+
+                    $query_result = $db_connection->query($select_query);
+
+                    while ($row = $query_result->fetch_assoc()) {
+                        $category = $row["category"];
+
+                        if (!in_array($category, $category_array)) {
+                            array_push($category_array, $category);
+                        }
+                    }
+
+                    foreach($category_array as $category) {
+                        echo "<li>".$category."</li>";
+                    }
+                ?>
             </ul>
         </li>
     </ul>

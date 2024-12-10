@@ -1,8 +1,10 @@
 <?php 
+    session_start();
+    
     if (isset($_SESSION["logged"])) {
         header("Location: ../index.php");
     }
-    $root = "/PHP_Websites/Ksiegarnia/";
+    $root = $_SESSION["root_directory"];
 ?>
 
 <!DOCTYPE html>
