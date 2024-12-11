@@ -3,18 +3,18 @@
     session_start();
 
     if (isset($_SESSION["logged"])) {
-        header("Location: ../index.php");
+        header("Location: ../../index.php");
     }
 
     if (!isset($_SESSION["login"]) || !isset($_SESSION["password"])) {
-        header("Location: login_form.php");
+        header("Location: ../login_form.php");
     }
 
     try {
         $login = $_POST["login"];
         $password = $_POST["password"];
 
-        require_once "components/connect.php";
+        require_once "connect.php";
 
         $db_connection = DatabaseConnect();
 
@@ -34,17 +34,17 @@
                 $_SESSION["logged"] = true;
                 $_SESSION["user"] = $data["username"];
                 
-                header("Location: ../index.php");
+                header("Location: ../../index.php");
             } else {
                 $_SESSION["e_login"] = "Try again bozo";
-                header("Location: login_form.php");
+                header("Location: ../login_form.php");
             }
 
             $query_result->free_result();
 
         } else {
             $_SESSION["e_login"] = "Try again bozo";
-            header("Location: login_form.php");
+            header("Location: ../login_form.php");
         }
 
         $db_connection->close();

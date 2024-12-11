@@ -16,14 +16,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include "components/font.php" ?>
     <link rel="stylesheet" href="../css/main.css">
-    <title>LOGIN</title>
+    <title>Księgarnia</title>
 </head>
 <body>
     <?php include "components/side_panel.php" ?>
 
     <main>
         <h3>Zaloguj się</h3>
-        <form method="post" action="login.php">
+        <form method="post" action="components/login.php">
             Nazwa użytkownika: <input type="text" name="login"> <br />
             Hasło: <input type="password" name="password"><br />
             <?php 

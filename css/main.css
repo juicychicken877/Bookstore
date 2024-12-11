@@ -7,6 +7,10 @@
     font-family: "Lato", sans-serif;
 }
 
+body {
+    background-color: #eee;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -16,23 +20,30 @@ a:visited {
     color: black;
 }
 
-#side_panel, main {
+#side_panel_substitute, #side_panel {
     height: 100vh;
-    float: left;
 }
 
 main {
-    background-color: #eee;
+    float: left;
     width: 80%;
     padding: 15px;
     box-sizing: border-box;
 }
 
 #side_panel {
+    position: fixed;
+    top: 0;
+    left: 0;
     box-sizing: border-box;
     padding: 15px;
     width: 20%;
     background-color:burlywood;
+}
+
+#side_panel_substitute {
+    float: left;
+    width: 20%;
 }
 
 .categories {

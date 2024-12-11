@@ -2,11 +2,7 @@
     error_reporting(E_ALL & ~E_NOTICE);
     session_start();
 
-    if (isset($_SESSION["registered"])) {
-        unset($_SESSION["registered"]);
-    } else {
-        header("Location: ../index.php");
-    }
+    if (isset($_GET["book_data"])) $book_data = json_decode(urldecode($_GET["book_data"]));
 ?>
 
 <!DOCTYPE html>
@@ -22,8 +18,15 @@
     <?php include "components/side_panel.php" ?>
 
     <main>
-        <h2>Witaj na pokładzie księgarni!</h2>
-        <p>Możesz się teraz zalogować!</p>
+        <?php 
+            require_once "components/book_manager.php";
+
+            DisplayImage($book_data->id_image);
+        ?>
+
+        <p><?php echo $book_data->title ?></p>
+        <p><?php echo $book_data->price ?></p>
+        <p><?php echo $book_data->description ?></p>
     </main>
 </body>
 </html>

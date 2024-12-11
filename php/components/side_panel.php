@@ -1,6 +1,6 @@
 <?php 
     if (isset($_SESSION["root_directory"])) $root = $_SESSION["root_directory"];
-    else header("Location: ../index.php");
+    else header("Location: ../../index.php");
 ?>
 
 <section id="side_panel">
@@ -18,7 +18,7 @@
             if (!isset($_SESSION["logged"])) {
                 echo '<li><a href="'.$root.'php/login_form.php" class="header link">Zaloguj się</a></li>'; 
             } else {
-                echo '<li><a href="'.$root.'php/logout.php" class="header link">Wyloguj się</a></li>';
+                echo '<li><a href="'.$root.'php/components/logout.php" class="header link">Wyloguj się</a></li>';
             }
         
         ?>
@@ -52,3 +52,4 @@
         </li>
     </ul>
 </section>
+<section id="side_panel_substitute"></section>

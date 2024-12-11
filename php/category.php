@@ -30,5 +30,7 @@
             ?>
         </section>
     </main>
+
+    <script src="../js/books.js"></script>
 </body>
 </html>

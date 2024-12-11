@@ -50,12 +50,10 @@
             $image_path = $file_directory."no_image.png";
         }
 
-        echo "<img src=".$image_path." width='140' height='200'>"; 
+        echo "<div class='image_container'><img src='$image_path'></div>"; 
     }
 
     function DisplayBooks($category) {
-        global $image_array;
-
         $select_query = "SELECT * FROM books WHERE books.category = '$category'";
 
         $db_connection = DatabaseConnect();
@@ -65,12 +63,18 @@
         while ($row = $query_result->fetch_assoc()) {
             $id_image = $row["id_image"];
 
+            $json_data = json_encode($row);
+
+            $get_command = "?book_data=".urlencode($json_data);
+
+            // return html
+            echo "<a href='./book.php".$get_command."'>";
             echo "<div class='book'>";
                 DisplayImage($id_image);
-                echo "<br />";
-                echo "<p>".$row["title"]."</p>";
-                echo "<p>".$row["price"]." PLN</p>";
-            echo "</div>";
+                // echo "<br />";
+                echo "<p class='book_title'>".$row["title"]."</p>";
+                echo "<p class='book_price'>".$row["price"]." PLN</p>";
+            echo "</div></a>";
         }
     }
 

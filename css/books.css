@@ -1,17 +1,54 @@
+:root {
+    --book_height: 260px;
+    --book_width: calc(0.7*var(--book_height));
+    --p_line_height: 19px;
+}
+
 .books {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: start;
     width: 100%;
-    column-gap: 10px;
+    column-gap: 20px;
+    row-gap: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
 .book {
-    width: 140px;
+    padding: 5px;
+    width: var(--book_width);
+    height: calc(var(--book_height) + 2 * var(--p_line_height) + 10px);
+}
+
+.image_container {
+    height: var(--book_height);
+    width: var(--book_width);
+}
+
+.image_container > img {
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+}
+
+.book_title {
+    line-height: var(--p_line_height);
+    font-weight: 700;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.book_price {
+    line-height: var(--p_line_height);
+    font-size: 14px;
 }
 
 .book:hover {
-    background-color: burlywood;
+    background-color: #ddd;
 }
