@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 11, 2024 at 09:41 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Generation Time: Dec 17, 2024 at 12:28 PM
+-- Wersja serwera: 10.4.32-MariaDB
+-- Wersja PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `authors`
+-- Struktura tabeli dla tabeli `authors`
 --
 
 CREATE TABLE `authors` (
@@ -38,45 +38,26 @@ CREATE TABLE `authors` (
 
 INSERT INTO `authors` (`id_author`, `full_name`) VALUES
 (1, 'Yuval Noah Harari'),
-(2, 'Peter H. Diamandis'),
 (3, 'Dale Carnegie'),
 (4, 'James Clear'),
 (5, 'Michael E. Gerber'),
 (6, 'Sun Tzu'),
-(7, 'T.K. Rowling'),
 (8, 'Simon Sinek'),
 (9, 'Joseph Murphy'),
 (10, 'Viktor E. Frankl'),
 (11, 'Robert T. Kiyosaki'),
 (12, 'Hans Rosling'),
 (13, 'Daniel Kahneman'),
-(14, 'Piotr Stankiewicz'),
 (15, 'Charles Duhigg'),
 (16, 'Ks. Jan Kaczkowski'),
 (17, 'Spencer Johnson'),
 (18, 'Susan Cain'),
-(19, 'Jim Kwik'),
 (20, 'Adam Leszczyński'),
-(21, 'Olga Tokarczuk'),
-(22, 'Piotr Zychowicz'),
-(23, 'Justyna Kopińska'),
-(24, 'Andrzej Leder'),
 (25, 'Malcolm Gladwell'),
-(26, 'Martyna Wojciechowska'),
 (27, 'Edith Eger'),
-(28, 'Beata Pawlikowska'),
-(29, 'Małgorzata Szejnert'),
-(30, 'Witold Szabłowski'),
-(31, 'Tomasz Piątek'),
 (32, 'Wojciech Drewniak'),
-(33, 'Andrzej Zygmuntowicz'),
-(34, 'Marek Rabij'),
-(35, 'Dariusz Rosiak'),
-(36, 'Filip Springer'),
-(37, 'Tomasz Łabuszewski'),
 (40, 'Carol S. Dweck'),
 (41, 'Stephen R. Covey'),
-(42, 'Cal Newport'),
 (43, 'Angela Duckworth'),
 (44, 'Eric Ries'),
 (45, 'David Goggins'),
@@ -86,16 +67,14 @@ INSERT INTO `authors` (`id_author`, `full_name`) VALUES
 (49, 'Héctor García'),
 (50, 'Francesc Miralles'),
 (51, 'John Doerr'),
-(52, 'Daniel H. Pink'),
 (53, 'Kerry Patterson'),
 (54, 'David Epstein'),
-(55, 'Matthew Walker'),
-(56, 'Eckhart Tolle');
+(55, 'Matthew Walker');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `books`
+-- Struktura tabeli dla tabeli `books`
 --
 
 CREATE TABLE `books` (
@@ -118,42 +97,24 @@ INSERT INTO `books` (`id_book`, `id_author`, `id_image`, `title`, `price`, `desc
 (4, 4, 4, 'Atomic Habits', 34.99, 'James Clear o budowaniu dobrych nawyków.', 'Rozwój osobisty'),
 (5, 5, 5, 'Mit przedsiębiorczości', 29.99, 'Michael E. Gerber o tym, jak budować skuteczny biznes.', 'Biznes'),
 (6, 6, 6, 'Sztuka wojny', 25.99, 'Sun Tzu – klasyczne dzieło o strategii i taktyce.', 'Strategia'),
-(7, 7, 7, 'Biedni, ale bogaci', 49.99, 'T.K. Rowling o różnicach między bogactwem a biedą.', 'Ekonomia'),
 (8, 8, 8, 'Zaczynaj od dlaczego', 37.99, 'Simon Sinek o inspirującym przywództwie.', 'Rozwój osobisty'),
 (9, 9, 9, 'Potęga podświadomości', 29.99, 'Joseph Murphy o wpływie myśli na życie.', 'Psychologia'),
 (10, 10, 10, 'Człowiek w poszukiwaniu sensu', 28.99, 'Viktor E. Frankl o przeżyciach w obozach koncentracyjnych.', 'Biografia'),
 (11, 11, 11, 'Bogaty ojciec, biedny ojciec', 33.99, 'Robert T. Kiyosaki o finansowej niezależności.', 'Finanse'),
 (12, 12, 12, 'Factfulness', 40.99, 'Hans Rosling o tym, jak widzieć świat racjonalniej.', 'Nauka'),
 (13, 13, 13, 'Pułapki myślenia', 44.99, 'Daniel Kahneman o błędach poznawczych.', 'Psychologia'),
-(14, 14, 14, 'Lekcje stoicyzmu', 22.99, 'Piotr Stankiewicz o współczesnym stoicyzmie.', 'Filozofia'),
 (15, 15, 15, 'Siła nawyku', 34.99, 'Charles Duhigg o tym, jak nawyki kształtują życie.', 'Psychologia'),
 (16, 16, 16, 'Życie na pełnej petardzie', 36.99, 'Ks. Jan Kaczkowski o życiu pełnym pasji.', 'Biografia'),
 (17, 17, 17, 'Kto zabrał mój ser?', 21.99, 'Spencer Johnson o zmianach w życiu i biznesie.', 'Rozwój osobisty'),
 (18, 18, 18, 'Ciszej proszę', 32.99, 'Susan Cain o sile introwertyków.', 'Psychologia'),
-(19, 19, 19, 'Nieograniczony', 38.99, 'Jim Kwik o wykorzystaniu potencjału umysłu.', 'Rozwój osobisty'),
 (20, 1, 20, 'Homo Deus', 45.99, 'Yuval Noah Harari o przyszłości ludzkości.', 'Historia'),
 (21, 1, 21, '21 lekcji na XXI wiek', 39.99, 'Yuval Noah Harari analizuje współczesne wyzwania.', 'Historia'),
 (22, 20, 22, 'Głosy: Ludowa historia Polski', 39.99, 'Adam Leszczyński przedstawia historię Polski z perspektywy ludowej.', 'Historia'),
-(23, 21, 23, 'Czuły narrator', 44.99, 'Olga Tokarczuk dzieli się swoimi przemyśleniami na temat literatury.', 'Eseje'),
-(24, 22, 24, 'Wojna się skończyła, ale…', 49.99, 'Piotr Zychowicz analizuje powojenną historię Polski.', 'Historia'),
-(25, 23, 25, 'Opowieści podręczne', 34.99, 'Zbiór reportaży Justyny Kopińskiej.', 'Reportaż'),
-(26, 24, 26, 'Prześniona rewolucja', 32.99, 'Andrzej Leder bada rewolucję społeczną w Polsce w XX wieku.', 'Historia'),
 (27, 25, 27, 'Punkt przełomowy', 36.99, 'Malcolm Gladwell o przełomowych momentach w społeczeństwach.', 'Psychologia'),
-(28, 26, 28, 'Poza horyzonty', 41.99, 'Martyna Wojciechowska o swoich podróżach.', 'Podróże'),
 (29, 27, 29, 'Wybór. Przetrwać niewyobrażalne', 37.99, 'Edith Eger o przeżyciach z obozu Auschwitz.', 'Biografia'),
-(30, 28, 30, 'Księga dobrych myśli', 27.99, 'Beata Pawlikowska o pozytywnym myśleniu.', 'Rozwój osobisty'),
-(31, 29, 31, 'Duchy Minionej Wojny', 33.99, 'Małgorzata Szejnert analizuje historię wojny.', 'Historia'),
-(32, 30, 32, 'Zabójca z miasta moreli', 29.99, 'Witold Szabłowski o tureckiej historii i społeczeństwie.', 'Reportaż'),
-(33, 31, 33, 'Polskie Piekiełko', 39.99, 'Tomasz Piątek analizuje polską politykę i historię.', 'Historia'),
 (34, 32, 34, 'Historia bez cenzury', 28.99, 'Wojciech Drewniak prezentuje historię w nietypowy sposób.', 'Historia'),
-(35, 33, 35, 'Sekrety wojennej Warszawy', 31.99, 'Andrzej Zygmuntowicz opowiada o wojennych tajemnicach Warszawy.', 'Historia'),
-(36, 34, 36, 'Życie na miarę', 38.99, 'Marek Rabij o prawdziwych historiach produkcji odzieży.', 'Reportaż'),
-(37, 35, 37, 'Polacy na krańcach świata', 42.99, 'Dariusz Rosiak bada emigrację Polaków.', 'Podróże'),
-(38, 36, 38, 'Miasto Archipelag', 39.99, 'Filip Springer o dawnych miastach wojewódzkich Polski.', 'Reportaż'),
-(39, 37, 39, 'Powstanie Warszawskie w relacjach', 46.99, 'Tomasz Łabuszewski analizuje relacje uczestników powstania.', 'Historia'),
 (41, 40, 41, 'Mindset: The New Psychology of Success', 37.99, 'Carol S. Dweck o nastawieniu, które prowadzi do sukcesu.', 'Rozwój osobisty'),
 (42, 41, 42, 'The 7 Habits of Highly Effective People', 45.99, 'Stephen R. Covey o nawykach skutecznych ludzi.', 'Rozwój osobisty'),
-(43, 42, 43, 'Deep Work', 39.99, 'Cal Newport o koncentracji w pracy.', 'Produktywność'),
 (44, 43, 44, 'Thinking, Fast and Slow', 44.99, 'Daniel Kahneman o błędach poznawczych i procesach myślowych.', 'Psychologia'),
 (45, 44, 45, 'Grit: The Power of Passion and Perseverance', 36.99, 'Angela Duckworth o wytrwałości i pasji.', 'Rozwój osobisty'),
 (46, 45, 46, 'The Lean Startup', 42.99, 'Eric Ries o nowoczesnym podejściu do tworzenia biznesów.', 'Biznes'),
@@ -173,7 +134,7 @@ INSERT INTO `books` (`id_book`, `id_author`, `id_image`, `title`, `price`, `desc
 -- --------------------------------------------------------
 
 --
--- Table structure for table `images`
+-- Struktura tabeli dla tabeli `images`
 --
 
 CREATE TABLE `images` (
@@ -202,12 +163,34 @@ INSERT INTO `images` (`id_image`, `id_file`, `extension`) VALUES
 (16, 'zycie_na_pelnej_petardzie', '.png'),
 (17, 'kto_zabral_moj_ser', '.png'),
 (18, 'ciszej_prosze', '.png'),
-(20, 'homo_deus', '.png');
+(20, 'homo_deus', '.png'),
+(21, '21_lekcji', '.png'),
+(22, 'ludowa_historia_polski', '.png'),
+(27, 'punkt_przelomowy', '.png'),
+(29, 'wybor_przetrwac', '.png'),
+(34, 'historia_bez_cenzury', '.png'),
+(41, 'mindset_the_new_psychology', '.png'),
+(42, 'the_7_habits', '.png'),
+(44, 'thinking_fast_and_slow', '.png'),
+(45, 'grit_the_power', '.png'),
+(46, 'lean_startup', '.png'),
+(47, 'start_with_why', '.png'),
+(48, 'cant_hurt_me', '.png'),
+(49, 'tools_of_titans', '.png'),
+(50, 'the_psychology_of_money', '.png'),
+(51, 'dare_to_lead', '.png'),
+(52, 'ikigai', '.png'),
+(54, 'measure_what_matters', '.png'),
+(55, 'drive_the_suprising_truth', '.png'),
+(56, 'crucial_conversations', '.png'),
+(58, 'range_why_generalists_triumph', '.png'),
+(59, 'why_we_sleep', '.png'),
+(60, 'the_power_of_now', '.png');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktura tabeli dla tabeli `users`
 --
 
 CREATE TABLE `users` (
@@ -228,29 +211,29 @@ INSERT INTO `users` (`id_user`, `username`, `name`, `surname`, `password`, `emai
 (4, 'admin', 'Krystian', 'Stanik', '$2y$10$ca9KcMfbX.t2pS8Nk.proOuMBlS7F1SAmBnI2ZtoK0eeAZwwBLe8a', 'krystian.stanik877@gmail.com');
 
 --
--- Indexes for dumped tables
+-- Indeksy dla zrzutów tabel
 --
 
 --
--- Indexes for table `authors`
+-- Indeksy dla tabeli `authors`
 --
 ALTER TABLE `authors`
   ADD PRIMARY KEY (`id_author`);
 
 --
--- Indexes for table `books`
+-- Indeksy dla tabeli `books`
 --
 ALTER TABLE `books`
   ADD PRIMARY KEY (`id_book`);
 
 --
--- Indexes for table `images`
+-- Indeksy dla tabeli `images`
 --
 ALTER TABLE `images`
   ADD PRIMARY KEY (`id_image`);
 
 --
--- Indexes for table `users`
+-- Indeksy dla tabeli `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id_user`);

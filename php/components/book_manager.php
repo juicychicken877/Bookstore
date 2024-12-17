@@ -50,7 +50,7 @@
             $image_path = $file_directory."no_image.png";
         }
 
-        echo "<div class='image_container'><img src='$image_path'></div>"; 
+        return "<img src='$image_path'>"; 
     }
 
     function DisplayBooks($category) {
@@ -70,10 +70,9 @@
             // return html
             echo "<a href='./book.php".$get_command."'>";
             echo "<div class='book'>";
-                DisplayImage($id_image);
-                // echo "<br />";
-                echo "<p class='book_title'>".$row["title"]."</p>";
-                echo "<p class='book_price'>".$row["price"]." PLN</p>";
+            echo "<div class='image_container'>".DisplayImage($id_image)."</div>";
+            echo "<p class='book_title'>".$row["title"]."</p>";
+            echo "<p class='book_price'>".$row["price"]." PLN</p>";
             echo "</div></a>";
         }
     }
