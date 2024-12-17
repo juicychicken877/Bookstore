@@ -1,0 +1,58 @@
+:root {
+    --width: 27%;
+    --padding: calc((100% - (2 * var(--width))) / 4);
+}
+
+.main_image_container {
+    float: left;
+    width: var(--width);
+    padding-left: var(--padding);
+    padding-right: calc(var(--padding) / 2);
+}
+
+.main_image_container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.book_right_panel {
+    float: left;
+    padding-right: var(--padding);
+    padding-left: calc(var(--padding) / 2);
+    width: var(--width);
+}
+
+.main_book_title {
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+}
+
+.main_book_price {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+.main_book_description {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.buy_button {
+    margin-top: 30px;
+    font-size: 20px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: burlywood;
+}
+
+.buy_button:hover {
+    cursor: pointer;
+    color: white;
+}
