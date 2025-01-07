@@ -140,7 +140,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include "components/font.php" ?>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/registration.css">
+    <link rel="stylesheet" href="../css/form.css">
     <title>Księgarnia</title>
 </head>
 <body>
@@ -148,10 +148,10 @@
 
     <main>
         <section class="registration">  
-            <h2>Zarejestruj się</h2>
+            <h2 class="main_header">Zarejestruj się</h2>
             <form method="post" action="registration.php">
                 <!-- Username -->
-                <span>Nazwa użytkownika: </span><input type="text" name="username" value="<?php 
+                <span>Nazwa użytkownika </span><br /><input type="text" name="username" value="<?php 
                     if (isset($_SESSION["r_username"])) { 
                         echo $_SESSION["r_username"]; 
                         unset($_SESSION["r_username"]); 
@@ -166,7 +166,7 @@
                     } 
                 ?>
                 <!-- Imie -->
-                <span>Imie: </span><input type="text" name="name" value="<?php 
+                <span>Imie</span><br /><input type="text" name="name" value="<?php 
                     if (isset($_SESSION["r_name"])) { 
                         echo $_SESSION["r_name"]; 
                         unset($_SESSION["r_name"]); 
@@ -181,7 +181,7 @@
                     } 
                 ?>
                 <!-- Nazwisko -->
-                <span>Nazwisko: </span><input type="text" name="surname" value="<?php 
+                <span>Nazwisko</span><br /><input type="text" name="surname" value="<?php 
                     if (isset($_SESSION["r_surname"])) { 
                         echo $_SESSION["r_surname"]; 
                         unset($_SESSION["r_surname"]); 
@@ -196,7 +196,7 @@
                     } 
                 ?>
                 <!-- Email -->
-                <span>E-mail: </span><input type="email" name="email" value="<?php 
+                <span>E-mail </span><br /><input type="email" name="email" value="<?php 
                     if (isset($_SESSION["r_email"])) { 
                         echo $_SESSION["r_email"]; 
                         unset($_SESSION["r_email"]); 
@@ -211,7 +211,7 @@
                     } 
                 ?>
                 <!-- Passwords -->
-                <span>Hasło: </span><input type="password" name="password1" value="<?php 
+                <span>Hasło</span> <br /><input type="password" name="password1" value="<?php 
                     if (isset($_SESSION["r_password1"])) { 
                         echo $_SESSION["r_password1"]; 
                         unset($_SESSION["r_password1"]); 
@@ -226,16 +226,17 @@
                     } 
                 ?>
                 <!-- Password2 -->
-                <span>Powtórz hasło: </span><input type="password" name="password2" value="<?php 
+                <span>Powtórz hasło</span><br /><input type="password" name="password2" value="<?php 
                     if (isset($_SESSION["r_password2"])) { 
                         echo $_SESSION["r_password2"]; 
                         unset($_SESSION["r_password2"]); 
                     } 
                 ?>" required> 
                 <br />
-                <input type="submit" value="Prześlij"> <br />
-                <a href="login_form.php">Masz konto? Zaloguj się</a>
+                <input type="submit" value="Zarejestruj się"> <br />
             </form>
+
+            <a href="login_form.php" class="form_link">Masz konto? Zaloguj się</a>
         </section>
     </main>
 </body>

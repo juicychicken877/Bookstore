@@ -1,5 +1,5 @@
 :root {
-    --width: 27%;
+    --width: 24%;
     --padding: calc((100% - (2 * var(--width))) / 4);
 }
 
@@ -38,21 +38,27 @@
     font-weight: 900;
 }
 
-.main_book_description {
+.main_book_author {
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.buy_button {
-    margin-top: 30px;
-    font-size: 20px;
-    width: 100%;
-    height: 50px;
-    border: none;
-    background-color: burlywood;
+.main_book_description {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.buy_button:hover {
-    cursor: pointer;
-    color: white;
+hr {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.buy_button {
+    margin-top: 30px;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    border: 1px solid black;
+    background-color: #efc998;
 }

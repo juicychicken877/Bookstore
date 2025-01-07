@@ -16,16 +16,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include "components/font.php" ?>
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/form.css">
     <title>Księgarnia</title>
 </head>
 <body>
     <?php include "components/side_panel.php" ?>
 
     <main>
-        <h3>Zaloguj się</h3>
+        <h2 class="main_header">Zaloguj się</h2>
         <form method="post" action="components/login.php">
-            Nazwa użytkownika: <input type="text" name="login"> <br />
-            Hasło: <input type="password" name="password"><br />
+            <span>Nazwa użytkownika</span> <br /><input type="text" name="login"> <br />
+            <span>Hasło</span><br /> <input type="password" name="password"><br />
             <?php 
                 if (isset($_SESSION["e_login"])) {
                     echo "<span class='error'>".$_SESSION["e_login"]."</span> <br />";
@@ -33,9 +34,8 @@
                 }
             ?>
             <input type="submit" value="Zaloguj"> <br />
-
-            <a href="<?php echo $root?>php/registration.php">Nie masz konta? Zarejestruj się</a>
         </form>
+        <a href="<?php echo $root?>php/registration.php" class="form_link">Nie masz konta? Zarejestruj się</a>
     </main>
 </body>
 </html>

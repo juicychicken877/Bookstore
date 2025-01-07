@@ -32,7 +32,15 @@
             if (password_verify($password, $fetched_password)) {
                 // logged in
                 $_SESSION["logged"] = true;
-                $_SESSION["user"] = $data["username"];
+                
+                $user_data = array(
+                    "username" => $data["username"],
+                    "email" => $data["email"],
+                    "name" => $data["name"],
+                    "surname" => $data["surname"]
+                );
+
+                $_SESSION["user"] = $user_data;
                 
                 header("Location: ../../index.php");
             } else {

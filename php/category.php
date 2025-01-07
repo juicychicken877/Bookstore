@@ -23,7 +23,7 @@
     <?php include "components/side_panel.php" ?>
 
     <main>
-        <h3>Kategoria: <?php echo $current_category?></h3>
+        <h2 class="main_header">Kategoria: <?php echo $current_category?></h2>
         <section class="books">
             <?php
                 DisplayBooks($current_category);
